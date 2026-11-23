@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+
+# Secrets - NEVER commit these (keep .env.example with empty values)
+.env
+.env.*
+!.env.example
+
+# Build output
+.next/
+out/
+dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Raw / large data (keep only the small cleaned dataset in git)
+data/raw/
+*.csv.gz
+
+# Logs & OS / editor files
+*.log
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Misc
+.vercel
+*.tsbuildinfo
+next-env.d.ts
