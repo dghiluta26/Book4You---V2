@@ -38,7 +38,12 @@ uv python install 3.13
 
 Instructions are added step by step as the project grows.
 
-- Frontend: see `frontend/` (Step 2)
+- Frontend (Next.js):
+  ```bash
+  cd frontend
+  npm install      # first time on each machine
+  npm run dev      # http://localhost:3000
+  ```
 - Backend: see `backend/` (Step 3)
 
 ## Working on several computers

@@ -37,3 +37,6 @@ Thumbs.db
 .vercel
 *.tsbuildinfo
 next-env.d.ts
+
+# Agent instructions (local only)
+BOOK4YOU_AGENT.md
