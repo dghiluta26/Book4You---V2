@@ -148,3 +148,37 @@
     @apply text-ink;
   }
 }
+
+/* Map markers (Leaflet): price pills in the brand green */
+.b4y-marker-wrapper {
+  background: transparent;
+  border: 0;
+}
+.b4y-marker {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--b4y-primary);
+  color: var(--b4y-cream);
+  border: 2px solid var(--b4y-cream);
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s, background 0.15s, color 0.15s;
+}
+.b4y-marker--active {
+  transform: translate(-50%, -100%) scale(1.2);
+  background: var(--b4y-cream);
+  color: var(--b4y-primary);
+  border-color: var(--b4y-primary);
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+}
+.leaflet-container {
+  font-family: var(--font-poppins), sans-serif;
+  background: var(--b4y-warm-gray);
+}

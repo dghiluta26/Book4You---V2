@@ -9,7 +9,7 @@ export default function AccommodationsPage() {
   const { t } = useLanguage()
 
   return (
-    <PageShell>
+    <PageShell wide>
       <h1 className="text-3xl font-semibold">{t("accommodations.title")}</h1>
       <p className="mt-2 mb-8 text-subtle">{t("accommodations.subtitle")}</p>
       {/* useSearchParams needs a Suspense boundary so the rest of the page can be prerendered */}

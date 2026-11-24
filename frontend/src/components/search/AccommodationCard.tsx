@@ -4,10 +4,19 @@ import Image from "next/image"
 import Link from "next/link"
 import { useLanguage } from "@/i18n/LanguageProvider"
 import type { TranslationKey } from "@/i18n/dictionaries"
+import { cn } from "@/lib/utils"
 import type { AccommodationSummary } from "@/types/accommodation"
 
+type Props = {
+  stay: AccommodationSummary
+  /** Highlighted while its marker is hovered on the map. */
+  highlighted?: boolean
+  /** Called when the mouse enters or leaves the card, so the map can highlight the marker. */
+  onHover?: (id: number | null) => void
+}
+
 /** White card, 18px radius, lifts on hover, 240px photo with the type badge on top. */
-export function AccommodationCard({ stay }: { stay: AccommodationSummary }) {
+export function AccommodationCard({ stay, highlighted = false, onHover }: Props) {
   const { t, locale } = useLanguage()
 
   const guests = `${stay.capacity} ${t(stay.capacity === 1 ? "card.guest" : "card.guests")}`
@@ -22,7 +31,12 @@ export function AccommodationCard({ stay }: { stay: AccommodationSummary }) {
   return (
     <Link
       href={`/accommodations/${stay.id}`}
-      className="group block overflow-hidden rounded-2xl bg-surface shadow-card transition-all duration-200 hover:-translate-y-[5px] hover:shadow-card-hover"
+      onMouseEnter={() => onHover?.(stay.id)}
+      onMouseLeave={() => onHover?.(null)}
+      className={cn(
+        "group block overflow-hidden rounded-2xl bg-surface shadow-card transition-all duration-200 hover:-translate-y-[5px] hover:shadow-card-hover",
+        highlighted && "-translate-y-[5px] shadow-card-hover ring-2 ring-primary",
+      )}
     >
       <div className="relative h-[240px] w-full bg-muted-green">
         {stay.thumbnail && (

@@ -11,6 +11,8 @@ import {
   type SortOption,
 } from "@/lib/search-filters"
 import type { AccommodationPage } from "@/types/accommodation"
+import { MapView } from "@/components/map/MapViewLoader"
+import { cn } from "@/lib/utils"
 import { AccommodationCard } from "./AccommodationCard"
 import { FilterPanel } from "./FilterPanel"
 import { Pagination } from "./Pagination"
@@ -23,6 +25,10 @@ export function ResultsView() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [showFilters, setShowFilters] = useState(false)
+  // Below the "xl" breakpoint the list and the map are shown one at a time.
+  const [mobileView, setMobileView] = useState<"list" | "map">("list")
+  // Stay highlighted in both the list and the map (hover on a card or on a marker).
+  const [hoveredId, setHoveredId] = useState<number | null>(null)
   const [retry, setRetry] = useState(0)
 
   const filters = useMemo(() => filtersFromParams(searchParams), [searchParams])
@@ -77,6 +83,22 @@ export function ResultsView() {
                 ? t("results.foundOne")
                 : t("results.found", { n: current.page.total }))}
           </p>
+          <div role="group" className="flex overflow-hidden rounded-[10px] border border-primary xl:hidden">
+            {(["list", "map"] as const).map((view) => (
+              <button
+                key={view}
+                type="button"
+                aria-pressed={mobileView === view}
+                onClick={() => setMobileView(view)}
+                className={cn(
+                  "h-10 cursor-pointer px-4 text-sm font-medium transition-colors",
+                  mobileView === view ? "bg-primary text-cream" : "text-primary hover:bg-primary/8",
+                )}
+              >
+                {t(view === "list" ? "map.viewList" : "map.viewMap")}
+              </button>
+            ))}
+          </div>
           <label className="flex items-center gap-2 text-sm text-subtle">
             {t("sort.label")}
             <select
@@ -93,7 +115,7 @@ export function ResultsView() {
         </div>
 
         {loading && (
-          <div className="grid gap-6 sm:grid-cols-2 2xl:grid-cols-3" role="status">
+          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2" role="status">
             {Array.from({ length: 6 }, (_, index) => (
               <div key={index} className="h-[400px] animate-pulse rounded-2xl bg-warm-gray" />
             ))}
@@ -118,18 +140,30 @@ export function ResultsView() {
         )}
 
         {current?.page && current.page.items.length > 0 && (
-          <>
-            <div className="grid gap-6 sm:grid-cols-2 2xl:grid-cols-3">
-              {current.page.items.map((stay) => (
-                <AccommodationCard key={stay.id} stay={stay} />
-              ))}
+          <div className="xl:grid xl:grid-cols-2 xl:items-start xl:gap-6">
+            <div className={cn(mobileView === "map" && "hidden xl:block")}>
+              <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2">
+                {current.page.items.map((stay) => (
+                  <AccommodationCard
+                    key={stay.id}
+                    stay={stay}
+                    highlighted={hoveredId === stay.id}
+                    onHover={setHoveredId}
+                  />
+                ))}
+              </div>
+              <Pagination
+                page={current.page.page}
+                totalPages={current.page.total_pages}
+                onChange={(page) => navigate({ ...filters, page })}
+              />
             </div>
-            <Pagination
-              page={current.page.page}
-              totalPages={current.page.total_pages}
-              onChange={(page) => navigate({ ...filters, page })}
-            />
-          </>
+            <div className={cn(mobileView === "list" && "hidden xl:block")}>
+              <div className="h-[70vh] min-h-[420px] xl:sticky xl:top-6 xl:h-[calc(100vh-3rem)] xl:min-h-[520px]">
+                <MapView stays={current.page.items} hoveredId={hoveredId} onHover={setHoveredId} />
+              </div>
+            </div>
+          </div>
         )}
       </section>
     </div>

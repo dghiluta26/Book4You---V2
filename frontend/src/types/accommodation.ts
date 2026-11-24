@@ -35,3 +35,21 @@ export type AccommodationPage = {
   page_size: number
   total_pages: number
 }
+
+export type Amenity = {
+  slug: string
+  name_en: string
+  name_ro: string
+}
+
+export type AccommodationImage = {
+  url: string
+  position: number
+}
+
+export type AccommodationDetail = AccommodationSummary & {
+  description: string | null
+  address: string | null
+  images: AccommodationImage[]
+  amenities: Amenity[]
+}
