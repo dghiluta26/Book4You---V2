@@ -59,6 +59,16 @@ Instructions are added step by step as the project grows.
   pytest
   ```
 
+### Demo catalog
+
+50 curated stays in 18 Romanian locations (`data/catalog_seed.json`). After `alembic upgrade head`:
+
+```bash
+cd backend && source .venv/bin/activate     # Windows: .venv\Scripts\Activate.ps1
+python ../data/import_catalog.py --dry-run  # validate only
+python ../data/import_catalog.py            # import (safe to run again: it updates, not duplicates)
+```
+
 ## Working on several computers
 
 - `git pull` before you start, `git push` when you stop.
