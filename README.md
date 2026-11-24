@@ -42,6 +42,7 @@ Instructions are added step by step as the project grows.
   ```bash
   cd frontend
   npm install      # first time on each machine
+  cp .env.example .env.local   # optional: API URL (default http://localhost:8000). Windows: copy
   npm run dev      # http://localhost:3000
   ```
 - Backend (FastAPI), first time on each machine:
