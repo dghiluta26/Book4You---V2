@@ -58,6 +58,13 @@ Instructions are added step by step as the project grows.
   uvicorn app.main:app --reload   # http://localhost:8000/docs
   pytest
   ```
+  The search tests need a throwaway PostgreSQL and are skipped without one (see `backend/tests/conftest.py`).
+  With Docker:
+  ```bash
+  docker run --rm -d --name b4y-test-pg -p 54329:5432 -e POSTGRES_PASSWORD=test postgres:17
+  TEST_DATABASE_URL=postgresql://postgres:test@localhost:54329/postgres pytest   # PowerShell: $env:TEST_DATABASE_URL="..."
+  docker stop b4y-test-pg
+  ```
 
 ### Demo catalog
 
