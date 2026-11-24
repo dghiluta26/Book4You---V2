@@ -1,0 +1,1569 @@
+{
+  "_comment": "Hand-curated demo catalog (fictional listings in real Romanian locations). Photos are placeholders from picsum.photos.",
+  "amenities": [
+    {
+      "slug": "wifi",
+      "name_en": "Wi-Fi",
+      "name_ro": "Wi-Fi"
+    },
+    {
+      "slug": "parking",
+      "name_en": "Free parking",
+      "name_ro": "Parcare gratuită"
+    },
+    {
+      "slug": "kitchen",
+      "name_en": "Kitchen",
+      "name_ro": "Bucătărie"
+    },
+    {
+      "slug": "air_conditioning",
+      "name_en": "Air conditioning",
+      "name_ro": "Aer condiționat"
+    },
+    {
+      "slug": "heating",
+      "name_en": "Heating",
+      "name_ro": "Încălzire"
+    },
+    {
+      "slug": "tv",
+      "name_en": "TV",
+      "name_ro": "TV"
+    },
+    {
+      "slug": "washer",
+      "name_en": "Washing machine",
+      "name_ro": "Mașină de spălat"
+    },
+    {
+      "slug": "balcony",
+      "name_en": "Balcony",
+      "name_ro": "Balcon"
+    },
+    {
+      "slug": "pool",
+      "name_en": "Pool",
+      "name_ro": "Piscină"
+    },
+    {
+      "slug": "sauna",
+      "name_en": "Sauna",
+      "name_ro": "Saună"
+    },
+    {
+      "slug": "fireplace",
+      "name_en": "Fireplace",
+      "name_ro": "Șemineu"
+    },
+    {
+      "slug": "pet_friendly",
+      "name_en": "Pets allowed",
+      "name_ro": "Animale de companie acceptate"
+    },
+    {
+      "slug": "breakfast",
+      "name_en": "Breakfast included",
+      "name_ro": "Mic dejun inclus"
+    },
+    {
+      "slug": "hot_tub",
+      "name_en": "Hot tub",
+      "name_ro": "Jacuzzi"
+    },
+    {
+      "slug": "bbq",
+      "name_en": "Barbecue",
+      "name_ro": "Grătar"
+    },
+    {
+      "slug": "mountain_view",
+      "name_en": "Mountain view",
+      "name_ro": "Vedere la munte"
+    },
+    {
+      "slug": "workspace",
+      "name_en": "Workspace",
+      "name_ro": "Spațiu de lucru"
+    },
+    {
+      "slug": "elevator",
+      "name_en": "Elevator",
+      "name_ro": "Lift"
+    }
+  ],
+  "accommodations": [
+    {
+      "source_id": "seed-001",
+      "title": "Bright Apartment in Brașov Old Town",
+      "description": "Sunny two-bedroom flat a few minutes from Piața Sfatului, ideal for city breaks and weekends.",
+      "type": "apartment",
+      "city": "Brașov",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.645489,
+      "longitude": 25.5754,
+      "price_per_night": 280,
+      "currency": "RON",
+      "capacity": 4,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "tv",
+        "washer",
+        "workspace",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-001-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-001-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-001-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-002",
+      "title": "Studio with Tâmpa Mountain View",
+      "description": "Compact studio with a balcony facing Tâmpa Mountain, perfect for couples.",
+      "type": "apartment",
+      "city": "Brașov",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.638201,
+      "longitude": 25.58095,
+      "price_per_night": 190,
+      "currency": "RON",
+      "capacity": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "tv",
+        "mountain_view",
+        "balcony"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-002-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-002-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-002-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-003",
+      "title": "Family House near Schei District",
+      "description": "Spacious house with a small garden and barbecue, a calm base close to the old town.",
+      "type": "house",
+      "city": "Brașov",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.647429,
+      "longitude": 25.593648,
+      "price_per_night": 420,
+      "currency": "RON",
+      "capacity": 6,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "tv",
+        "washer",
+        "bbq",
+        "pet_friendly"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-003-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-003-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-003-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-004",
+      "title": "Boutique Hotel Piața Sfatului",
+      "description": "Elegant double room in a restored building on the main square, breakfast included.",
+      "type": "hotel",
+      "city": "Brașov",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.650544,
+      "longitude": 25.577134,
+      "price_per_night": 380,
+      "currency": "RON",
+      "capacity": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "heating",
+        "tv",
+        "breakfast",
+        "air_conditioning",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-004-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-004-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-004-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-005",
+      "title": "Central Backpackers Hostel Brașov",
+      "description": "Friendly hostel with a shared kitchen and a common room, close to the train station.",
+      "type": "hostel",
+      "city": "Brașov",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.641138,
+      "longitude": 25.575534,
+      "price_per_night": 95,
+      "currency": "RON",
+      "capacity": 4,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "workspace"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-005-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-005-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-005-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-006",
+      "title": "Alpine Cabin in Poiana Brașov",
+      "description": "Wooden cabin by the ski slopes with fireplace and sauna. Great for hiking and winter sports.",
+      "type": "cabin",
+      "city": "Poiana Brașov",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.588773,
+      "longitude": 25.55485,
+      "price_per_night": 520,
+      "currency": "RON",
+      "capacity": 6,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "fireplace",
+        "sauna",
+        "bbq",
+        "mountain_view"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-006-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-006-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-006-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-007",
+      "title": "Ski-in Apartment Poiana Brașov",
+      "description": "Apartment steps from the ski lift, with a balcony and mountain views.",
+      "type": "apartment",
+      "city": "Poiana Brașov",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.584931,
+      "longitude": 25.546267,
+      "price_per_night": 360,
+      "currency": "RON",
+      "capacity": 4,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "tv",
+        "mountain_view",
+        "balcony"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-007-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-007-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-007-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-008",
+      "title": "Mountain Villa with Hot Tub",
+      "description": "Large villa for groups, with hot tub, sauna and panoramic mountain views.",
+      "type": "villa",
+      "city": "Poiana Brașov",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.597398,
+      "longitude": 25.555958,
+      "price_per_night": 1100,
+      "currency": "RON",
+      "capacity": 10,
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "tv",
+        "fireplace",
+        "hot_tub",
+        "sauna",
+        "bbq",
+        "mountain_view",
+        "pet_friendly"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-008-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-008-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-008-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-009",
+      "title": "Cabin Under Bran Castle",
+      "description": "Quiet cabin within walking distance of Bran Castle, surrounded by forest.",
+      "type": "cabin",
+      "city": "Bran",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.509409,
+      "longitude": 25.369499,
+      "price_per_night": 380,
+      "currency": "RON",
+      "capacity": 4,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "fireplace",
+        "pet_friendly",
+        "mountain_view"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-009-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-009-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-009-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-010",
+      "title": "Countryside House in Bran",
+      "description": "Traditional village house with a yard, a good base for the Piatra Craiului trails.",
+      "type": "house",
+      "city": "Bran",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.521189,
+      "longitude": 25.353182,
+      "price_per_night": 340,
+      "currency": "RON",
+      "capacity": 5,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "tv",
+        "bbq",
+        "pet_friendly"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-010-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-010-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-010-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-011",
+      "title": "Guest Room near Bran Castle",
+      "description": "Cozy private room in a family guesthouse, homemade breakfast available.",
+      "type": "room",
+      "city": "Bran",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.521116,
+      "longitude": 25.372548,
+      "price_per_night": 150,
+      "currency": "RON",
+      "capacity": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "heating",
+        "breakfast"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-011-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-011-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-011-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-012",
+      "title": "Forest Cabin near Râșnov Fortress",
+      "description": "Cabin at the edge of the forest with a hot tub, minutes from Râșnov Fortress.",
+      "type": "cabin",
+      "city": "Râșnov",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.585805,
+      "longitude": 25.451353,
+      "price_per_night": 450,
+      "currency": "RON",
+      "capacity": 6,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "fireplace",
+        "hot_tub",
+        "bbq",
+        "mountain_view"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-012-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-012-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-012-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-013",
+      "title": "Cozy Apartment in Râșnov",
+      "description": "Practical apartment with free parking, 15 minutes from Brașov.",
+      "type": "apartment",
+      "city": "Râșnov",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.598144,
+      "longitude": 25.456425,
+      "price_per_night": 230,
+      "currency": "RON",
+      "capacity": 3,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "tv",
+        "washer"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-013-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-013-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-013-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-014",
+      "title": "Peleș Valley Cabin",
+      "description": "Warm cabin in the Peleș valley, close to the castle and hiking routes.",
+      "type": "cabin",
+      "city": "Sinaia",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.341855,
+      "longitude": 25.538708,
+      "price_per_night": 480,
+      "currency": "RON",
+      "capacity": 5,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "fireplace",
+        "pet_friendly",
+        "mountain_view",
+        "bbq"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-014-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-014-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-014-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-015",
+      "title": "Mountain Hotel Sinaia",
+      "description": "Hotel room with mountain views, indoor pool and breakfast buffet.",
+      "type": "hotel",
+      "city": "Sinaia",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.35695,
+      "longitude": 25.552904,
+      "price_per_night": 420,
+      "currency": "RON",
+      "capacity": 3,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "heating",
+        "tv",
+        "breakfast",
+        "pool",
+        "mountain_view",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-015-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-015-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-015-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-016",
+      "title": "Sinaia Center Apartment",
+      "description": "Central apartment, 5 minutes from the gondola and the train station.",
+      "type": "apartment",
+      "city": "Sinaia",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.356143,
+      "longitude": 25.556432,
+      "price_per_night": 260,
+      "currency": "RON",
+      "capacity": 4,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "tv",
+        "washer",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-016-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-016-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-016-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-017",
+      "title": "Bucegi View Cabin Bușteni",
+      "description": "Cabin with a terrace facing the Bucegi Mountains, start of many trails.",
+      "type": "cabin",
+      "city": "Bușteni",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.410725,
+      "longitude": 25.553247,
+      "price_per_night": 400,
+      "currency": "RON",
+      "capacity": 4,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "fireplace",
+        "mountain_view",
+        "pet_friendly"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-017-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-017-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-017-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-018",
+      "title": "Chalet near Caraiman Cross",
+      "description": "Large chalet for families and groups, with sauna and fireplace.",
+      "type": "house",
+      "city": "Bușteni",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.407571,
+      "longitude": 25.541457,
+      "price_per_night": 550,
+      "currency": "RON",
+      "capacity": 8,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "tv",
+        "fireplace",
+        "sauna",
+        "bbq",
+        "mountain_view"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-018-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-018-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-018-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-019",
+      "title": "Historic Center Loft Sibiu",
+      "description": "Stylish loft with exposed beams, right between the Large and Small Squares.",
+      "type": "apartment",
+      "city": "Sibiu",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.804888,
+      "longitude": 24.128919,
+      "price_per_night": 300,
+      "currency": "RON",
+      "capacity": 3,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "air_conditioning",
+        "tv",
+        "workspace"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-019-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-019-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-019-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-020",
+      "title": "Grand Hotel Piața Mare",
+      "description": "Classic hotel on the main square with a rich breakfast.",
+      "type": "hotel",
+      "city": "Sibiu",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.805534,
+      "longitude": 24.127766,
+      "price_per_night": 450,
+      "currency": "RON",
+      "capacity": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "heating",
+        "air_conditioning",
+        "tv",
+        "breakfast",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-020-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-020-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-020-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-021",
+      "title": "Garden Villa Sibiu",
+      "description": "Villa with a garden and pool, 10 minutes from the old town.",
+      "type": "villa",
+      "city": "Sibiu",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.802391,
+      "longitude": 24.112883,
+      "price_per_night": 750,
+      "currency": "RON",
+      "capacity": 8,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "air_conditioning",
+        "tv",
+        "pool",
+        "bbq",
+        "washer"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-021-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-021-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-021-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-022",
+      "title": "Private Room in Old Sibiu",
+      "description": "Simple private room in a historic house, shared kitchen.",
+      "type": "room",
+      "city": "Sibiu",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.792858,
+      "longitude": 24.119703,
+      "price_per_night": 140,
+      "currency": "RON",
+      "capacity": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "heating",
+        "tv"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-022-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-022-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-022-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-023",
+      "title": "Modern Flat near Central Park",
+      "description": "Modern flat by Central Park, a short walk to Piața Unirii.",
+      "type": "apartment",
+      "city": "Cluj-Napoca",
+      "country": "Romania",
+      "address": null,
+      "latitude": 46.762796,
+      "longitude": 23.616118,
+      "price_per_night": 310,
+      "currency": "RON",
+      "capacity": 3,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "air_conditioning",
+        "tv",
+        "washer",
+        "workspace",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-023-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-023-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-023-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-024",
+      "title": "Design Studio on Eroilor",
+      "description": "Designer studio in the heart of the city, great for remote work.",
+      "type": "apartment",
+      "city": "Cluj-Napoca",
+      "country": "Romania",
+      "address": null,
+      "latitude": 46.76322,
+      "longitude": 23.617383,
+      "price_per_night": 240,
+      "currency": "RON",
+      "capacity": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "air_conditioning",
+        "tv",
+        "workspace"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-024-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-024-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-024-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-025",
+      "title": "Business Hotel Cluj",
+      "description": "Comfortable business hotel with parking and breakfast.",
+      "type": "hotel",
+      "city": "Cluj-Napoca",
+      "country": "Romania",
+      "address": null,
+      "latitude": 46.773914,
+      "longitude": 23.619815,
+      "price_per_night": 360,
+      "currency": "RON",
+      "capacity": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "heating",
+        "air_conditioning",
+        "tv",
+        "breakfast",
+        "workspace",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-025-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-025-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-025-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-026",
+      "title": "Cluj Student Hostel",
+      "description": "Budget-friendly dorm-style hostel popular with students and backpackers.",
+      "type": "hostel",
+      "city": "Cluj-Napoca",
+      "country": "Romania",
+      "address": null,
+      "latitude": 46.768604,
+      "longitude": 23.615466,
+      "price_per_night": 80,
+      "currency": "RON",
+      "capacity": 6,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "workspace"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-026-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-026-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-026-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-027",
+      "title": "Quiet House in Zorilor",
+      "description": "Family house in a quiet residential area with a garden.",
+      "type": "house",
+      "city": "Cluj-Napoca",
+      "country": "Romania",
+      "address": null,
+      "latitude": 46.76654,
+      "longitude": 23.635826,
+      "price_per_night": 480,
+      "currency": "RON",
+      "capacity": 6,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "tv",
+        "washer",
+        "pet_friendly",
+        "bbq"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-027-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-027-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-027-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-028",
+      "title": "Penthouse in Old Town Bucharest",
+      "description": "Penthouse with a terrace over the Lipscani district.",
+      "type": "apartment",
+      "city": "București",
+      "country": "Romania",
+      "address": null,
+      "latitude": 44.429761,
+      "longitude": 26.105556,
+      "price_per_night": 520,
+      "currency": "RON",
+      "capacity": 4,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "air_conditioning",
+        "tv",
+        "balcony",
+        "elevator",
+        "washer"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-028-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-028-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-028-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-029",
+      "title": "Cozy Flat near Herăstrău Park",
+      "description": "Bright flat next to Herăstrău Park, well connected by metro.",
+      "type": "apartment",
+      "city": "București",
+      "country": "Romania",
+      "address": null,
+      "latitude": 44.420223,
+      "longitude": 26.108916,
+      "price_per_night": 270,
+      "currency": "RON",
+      "capacity": 3,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "air_conditioning",
+        "tv",
+        "workspace",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-029-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-029-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-029-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-030",
+      "title": "Central Hotel Calea Victoriei",
+      "description": "Hotel on Calea Victoriei, close to museums and restaurants.",
+      "type": "hotel",
+      "city": "București",
+      "country": "Romania",
+      "address": null,
+      "latitude": 44.420068,
+      "longitude": 26.099125,
+      "price_per_night": 410,
+      "currency": "RON",
+      "capacity": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "heating",
+        "air_conditioning",
+        "tv",
+        "breakfast",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-030-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-030-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-030-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-031",
+      "title": "Bucharest Old Town Hostel",
+      "description": "Lively hostel in the Old Town with a shared kitchen and bar.",
+      "type": "hostel",
+      "city": "București",
+      "country": "Romania",
+      "address": null,
+      "latitude": 44.43659,
+      "longitude": 26.10642,
+      "price_per_night": 90,
+      "currency": "RON",
+      "capacity": 4,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "air_conditioning",
+        "workspace"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-031-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-031-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-031-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-032",
+      "title": "Room in Cotroceni Villa",
+      "description": "Quiet private room in an interwar villa near Cotroceni Park.",
+      "type": "room",
+      "city": "București",
+      "country": "Romania",
+      "address": null,
+      "latitude": 44.427939,
+      "longitude": 26.107669,
+      "price_per_night": 160,
+      "currency": "RON",
+      "capacity": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "heating",
+        "air_conditioning",
+        "breakfast"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-032-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-032-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-032-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-033",
+      "title": "Art Nouveau Apartment Timișoara",
+      "description": "Apartment in a Secession-style building near Piața Victoriei.",
+      "type": "apartment",
+      "city": "Timișoara",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.755757,
+      "longitude": 21.216428,
+      "price_per_night": 250,
+      "currency": "RON",
+      "capacity": 4,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "air_conditioning",
+        "tv",
+        "washer"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-033-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-033-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-033-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-034",
+      "title": "Hotel Piața Victoriei",
+      "description": "Well-located hotel on the city's main boulevard.",
+      "type": "hotel",
+      "city": "Timișoara",
+      "country": "Romania",
+      "address": null,
+      "latitude": 45.743481,
+      "longitude": 21.195599,
+      "price_per_night": 330,
+      "currency": "RON",
+      "capacity": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "heating",
+        "air_conditioning",
+        "tv",
+        "breakfast",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-034-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-034-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-034-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-035",
+      "title": "Palace View Flat Iași",
+      "description": "Flat with a view of the Palace of Culture, in the city center.",
+      "type": "apartment",
+      "city": "Iași",
+      "country": "Romania",
+      "address": null,
+      "latitude": 47.154809,
+      "longitude": 27.594897,
+      "price_per_night": 220,
+      "currency": "RON",
+      "capacity": 3,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "tv",
+        "washer",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-035-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-035-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-035-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-036",
+      "title": "Family House near Copou Park",
+      "description": "House close to Copou Park and the university, with a courtyard.",
+      "type": "house",
+      "city": "Iași",
+      "country": "Romania",
+      "address": null,
+      "latitude": 47.15272,
+      "longitude": 27.613801,
+      "price_per_night": 380,
+      "currency": "RON",
+      "capacity": 6,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "tv",
+        "washer",
+        "bbq",
+        "pet_friendly"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-036-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-036-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-036-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-037",
+      "title": "Seaside Apartment Constanța",
+      "description": "Two-bedroom apartment with a sea-view balcony near the Casino.",
+      "type": "apartment",
+      "city": "Constanța",
+      "country": "Romania",
+      "address": null,
+      "latitude": 44.167327,
+      "longitude": 28.629611,
+      "price_per_night": 290,
+      "currency": "RON",
+      "capacity": 4,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "air_conditioning",
+        "tv",
+        "balcony",
+        "washer",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-037-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-037-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-037-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-038",
+      "title": "Sea View Hotel Constanța",
+      "description": "Hotel on the seafront with a pool and breakfast.",
+      "type": "hotel",
+      "city": "Constanța",
+      "country": "Romania",
+      "address": null,
+      "latitude": 44.162909,
+      "longitude": 28.631878,
+      "price_per_night": 400,
+      "currency": "RON",
+      "capacity": 3,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "air_conditioning",
+        "tv",
+        "breakfast",
+        "pool",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-038-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-038-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-038-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-039",
+      "title": "Beachfront Apartment Mamaia",
+      "description": "Apartment 50 meters from the beach, with access to a resort pool.",
+      "type": "apartment",
+      "city": "Mamaia",
+      "country": "Romania",
+      "address": null,
+      "latitude": 44.261291,
+      "longitude": 28.617848,
+      "price_per_night": 450,
+      "currency": "RON",
+      "capacity": 4,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "air_conditioning",
+        "tv",
+        "balcony",
+        "pool",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-039-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-039-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-039-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-040",
+      "title": "Villa with Pool in Mamaia",
+      "description": "Luxury villa with a private pool, steps from the beach.",
+      "type": "villa",
+      "city": "Mamaia",
+      "country": "Romania",
+      "address": null,
+      "latitude": 44.248298,
+      "longitude": 28.611906,
+      "price_per_night": 1350,
+      "currency": "RON",
+      "capacity": 10,
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "air_conditioning",
+        "tv",
+        "pool",
+        "bbq",
+        "washer",
+        "hot_tub"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-040-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-040-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-040-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-041",
+      "title": "Budget Room near Mamaia Beach",
+      "description": "Simple air-conditioned room, a 5-minute walk from the sand.",
+      "type": "room",
+      "city": "Mamaia",
+      "country": "Romania",
+      "address": null,
+      "latitude": 44.254227,
+      "longitude": 28.612357,
+      "price_per_night": 170,
+      "currency": "RON",
+      "capacity": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "air_conditioning",
+        "tv"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-041-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-041-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-041-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-042",
+      "title": "Bohemian Beach House Vama Veche",
+      "description": "Relaxed beach house in the heart of Vama Veche.",
+      "type": "house",
+      "city": "Vama Veche",
+      "country": "Romania",
+      "address": null,
+      "latitude": 43.753692,
+      "longitude": 28.582139,
+      "price_per_night": 380,
+      "currency": "RON",
+      "capacity": 6,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "air_conditioning",
+        "bbq",
+        "pet_friendly"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-042-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-042-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-042-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-043",
+      "title": "Vama Veche Surf Hostel",
+      "description": "Hostel for beach lovers, 2 minutes from the sea.",
+      "type": "hostel",
+      "city": "Vama Veche",
+      "country": "Romania",
+      "address": null,
+      "latitude": 43.749988,
+      "longitude": 28.563141,
+      "price_per_night": 85,
+      "currency": "RON",
+      "capacity": 6,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "air_conditioning"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-043-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-043-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-043-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-044",
+      "title": "Medieval Citadel Townhouse",
+      "description": "Characterful townhouse inside the UNESCO citadel walls.",
+      "type": "house",
+      "city": "Sighișoara",
+      "country": "Romania",
+      "address": null,
+      "latitude": 46.229651,
+      "longitude": 24.792767,
+      "price_per_night": 360,
+      "currency": "RON",
+      "capacity": 4,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "tv"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-044-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-044-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-044-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-045",
+      "title": "Guest Room under the Clock Tower",
+      "description": "Private room with stone walls and a view of the Clock Tower.",
+      "type": "room",
+      "city": "Sighișoara",
+      "country": "Romania",
+      "address": null,
+      "latitude": 46.211518,
+      "longitude": 24.779819,
+      "price_per_night": 170,
+      "currency": "RON",
+      "capacity": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "heating",
+        "breakfast"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-045-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-045-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-045-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-046",
+      "title": "Art Nouveau Flat Oradea",
+      "description": "Flat near the Black Eagle Palace, in the Art Nouveau center.",
+      "type": "apartment",
+      "city": "Oradea",
+      "country": "Romania",
+      "address": null,
+      "latitude": 47.038693,
+      "longitude": 21.922468,
+      "price_per_night": 230,
+      "currency": "RON",
+      "capacity": 3,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "air_conditioning",
+        "tv"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-046-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-046-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-046-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-047",
+      "title": "Bucovina Wooden Cabin",
+      "description": "Wooden cabin close to the painted monasteries of Bucovina.",
+      "type": "cabin",
+      "city": "Suceava",
+      "country": "Romania",
+      "address": null,
+      "latitude": 47.657242,
+      "longitude": 26.25342,
+      "price_per_night": 340,
+      "currency": "RON",
+      "capacity": 5,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "fireplace",
+        "pet_friendly",
+        "bbq"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-047-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-047-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-047-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-048",
+      "title": "Downtown Apartment Târgu Mureș",
+      "description": "Practical apartment a short walk from Piața Trandafirilor.",
+      "type": "apartment",
+      "city": "Târgu Mureș",
+      "country": "Romania",
+      "address": null,
+      "latitude": 46.529871,
+      "longitude": 24.554185,
+      "price_per_night": 210,
+      "currency": "RON",
+      "capacity": 3,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "kitchen",
+        "heating",
+        "tv",
+        "washer",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-048-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-048-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-048-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-049",
+      "title": "Spa Cabin Vatra Dornei",
+      "description": "Relaxing cabin with sauna and hot tub, near the spa resort.",
+      "type": "cabin",
+      "city": "Vatra Dornei",
+      "country": "Romania",
+      "address": null,
+      "latitude": 47.354922,
+      "longitude": 25.360815,
+      "price_per_night": 420,
+      "currency": "RON",
+      "capacity": 6,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "amenities": [
+        "wifi",
+        "parking",
+        "kitchen",
+        "heating",
+        "fireplace",
+        "sauna",
+        "hot_tub",
+        "mountain_view"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-049-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-049-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-049-3/1200/800"
+      ]
+    },
+    {
+      "source_id": "seed-050",
+      "title": "Thermal Hotel Vatra Dornei",
+      "description": "Spa hotel with a thermal pool and breakfast.",
+      "type": "hotel",
+      "city": "Vatra Dornei",
+      "country": "Romania",
+      "address": null,
+      "latitude": 47.354422,
+      "longitude": 25.370102,
+      "price_per_night": 320,
+      "currency": "RON",
+      "capacity": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "wifi",
+        "parking",
+        "heating",
+        "tv",
+        "breakfast",
+        "pool",
+        "elevator"
+      ],
+      "images": [
+        "https://picsum.photos/seed/book4you-seed-050-1/1200/800",
+        "https://picsum.photos/seed/book4you-seed-050-2/1200/800",
+        "https://picsum.photos/seed/book4you-seed-050-3/1200/800"
+      ]
+    }
+  ]
+}
