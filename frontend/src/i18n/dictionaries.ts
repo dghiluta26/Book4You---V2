@@ -13,11 +13,9 @@ export const en = {
   "home.title": "Find your next stay",
   "home.subtitle":
     "Search accommodation the classic way, or just tell our assistant what you are looking for.",
-  "home.cta": "Browse accommodations",
 
   "accommodations.title": "Accommodations",
-  "accommodations.subtitle": "Search results will appear here.",
-  "accommodations.empty": "No accommodations to show yet.",
+  "accommodations.subtitle": "Find the stay that fits your plans.",
 
   "login.title": "Welcome back",
   "login.subtitle": "Log in to book stays and see your bookings.",
@@ -31,6 +29,51 @@ export const en = {
   "signup.subtitle": "Sign up to book stays and manage your bookings.",
   "signup.submit": "Create account",
   "signup.haveAccount": "Already have an account?",
+
+  "search.destination": "Where to?",
+  "search.checkIn": "Check-in",
+  "search.checkOut": "Check-out",
+  "search.guests": "Guests",
+  "search.submit": "Search",
+  "search.dateError": "Choose both dates. Check-out must be after check-in.",
+
+  "filters.title": "Filters",
+  "filters.city": "City",
+  "filters.type": "Type",
+  "filters.price": "Price per night (RON)",
+  "filters.min": "Min",
+  "filters.max": "Max",
+  "filters.apply": "Apply filters",
+  "filters.reset": "Reset",
+
+  "sort.label": "Sort by",
+  "sort.priceAsc": "Price: low to high",
+  "sort.priceDesc": "Price: high to low",
+
+  "type.apartment": "Apartment",
+  "type.house": "House",
+  "type.cabin": "Cabin",
+  "type.villa": "Villa",
+  "type.hotel": "Hotel",
+  "type.hostel": "Hostel",
+  "type.room": "Room",
+
+  "results.found": "{n} stays found",
+  "results.foundOne": "1 stay found",
+  "results.empty": "No stays match your filters. Try widening your search.",
+  "results.error":
+    "We couldn't load the stays. Check that the backend is running and try again.",
+  "results.retry": "Try again",
+
+  "card.perNight": "/ night",
+  "card.guest": "guest",
+  "card.guests": "guests",
+  "card.bedroom": "bedroom",
+  "card.bedrooms": "bedrooms",
+
+  "pagination.prev": "Previous",
+  "pagination.next": "Next",
+  "pagination.page": "Page {page} of {total}",
 
   "footer.tagline": "Find the right stay, faster.",
   "footer.explore": "Explore",
@@ -52,11 +95,9 @@ export const ro: Record<TranslationKey, string> = {
   "home.title": "Găsește următoarea ta cazare",
   "home.subtitle":
     "Caută cazare în mod clasic sau spune-i asistentului nostru ce îți dorești.",
-  "home.cta": "Vezi cazările",
 
   "accommodations.title": "Cazări",
-  "accommodations.subtitle": "Rezultatele căutării vor apărea aici.",
-  "accommodations.empty": "Nu există încă cazări de afișat.",
+  "accommodations.subtitle": "Găsește cazarea potrivită planurilor tale.",
 
   "login.title": "Bine ai revenit",
   "login.subtitle": "Autentifică-te pentru a rezerva și a-ți vedea rezervările.",
@@ -70,6 +111,51 @@ export const ro: Record<TranslationKey, string> = {
   "signup.subtitle": "Înregistrează-te pentru a rezerva și a-ți gestiona rezervările.",
   "signup.submit": "Creează cont",
   "signup.haveAccount": "Ai deja cont?",
+
+  "search.destination": "Unde mergi?",
+  "search.checkIn": "Check-in",
+  "search.checkOut": "Check-out",
+  "search.guests": "Oaspeți",
+  "search.submit": "Caută",
+  "search.dateError": "Alege ambele date. Check-out trebuie să fie după check-in.",
+
+  "filters.title": "Filtre",
+  "filters.city": "Oraș",
+  "filters.type": "Tip",
+  "filters.price": "Preț pe noapte (RON)",
+  "filters.min": "Min",
+  "filters.max": "Max",
+  "filters.apply": "Aplică filtrele",
+  "filters.reset": "Resetează",
+
+  "sort.label": "Sortează după",
+  "sort.priceAsc": "Preț: crescător",
+  "sort.priceDesc": "Preț: descrescător",
+
+  "type.apartment": "Apartament",
+  "type.house": "Casă",
+  "type.cabin": "Cabană",
+  "type.villa": "Vilă",
+  "type.hotel": "Hotel",
+  "type.hostel": "Hostel",
+  "type.room": "Cameră",
+
+  "results.found": "{n} cazări găsite",
+  "results.foundOne": "1 cazare găsită",
+  "results.empty": "Nicio cazare nu corespunde filtrelor. Încearcă o căutare mai largă.",
+  "results.error":
+    "Nu am putut încărca cazările. Verifică dacă backend-ul rulează și încearcă din nou.",
+  "results.retry": "Încearcă din nou",
+
+  "card.perNight": "/ noapte",
+  "card.guest": "oaspete",
+  "card.guests": "oaspeți",
+  "card.bedroom": "dormitor",
+  "card.bedrooms": "dormitoare",
+
+  "pagination.prev": "Anterior",
+  "pagination.next": "Următoarea",
+  "pagination.page": "Pagina {page} din {total}",
 
   "footer.tagline": "Găsește cazarea potrivită, mai repede.",
   "footer.explore": "Explorează",

@@ -23,7 +23,8 @@ const CHANGE_EVENT = "book4you:locale-change"
 type LanguageContextValue = {
   locale: Locale
   setLocale: (locale: Locale) => void
-  t: (key: TranslationKey) => string
+  /** Translate a key. Use {name} placeholders and pass values: t("results.found", { n: 5 }). */
+  t: (key: TranslationKey, params?: Record<string, string | number>) => string
 }
 
 const LanguageContext = createContext<LanguageContextValue | null>(null)
@@ -62,7 +63,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [locale])
 
   const value = useMemo<LanguageContextValue>(
-    () => ({ locale, setLocale, t: (key) => dictionaries[locale][key] }),
+    () => ({
+      locale,
+      setLocale,
+      t: (key, params) => {
+        const text: string = dictionaries[locale][key]
+        if (!params) return text
+        return text.replace(/\{(\w+)\}/g, (match, name: string) =>
+          name in params ? String(params[name]) : match,
+        )
+      },
+    }),
     [locale, setLocale],
   )
 
