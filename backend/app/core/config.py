@@ -12,6 +12,8 @@ class Settings(BaseSettings):
     app_env: str = "development"
     # Comma-separated string in .env; use `cors_origins_list` in code.
     cors_origins: str = "http://localhost:3000"
+    # Supabase Postgres connection string (see docs/database.md). Empty until configured.
+    database_url: str = ""
 
     @property
     def cors_origins_list(self) -> list[str]:
