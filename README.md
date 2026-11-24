@@ -44,7 +44,20 @@ Instructions are added step by step as the project grows.
   npm install      # first time on each machine
   npm run dev      # http://localhost:3000
   ```
-- Backend: see `backend/` (Step 3)
+- Backend (FastAPI), first time on each machine:
+  ```bash
+  cd backend
+  uv venv --python 3.13 .venv
+  # Linux/macOS:  source .venv/bin/activate
+  # Windows:      .venv\Scripts\Activate.ps1
+  uv pip install -r requirements.txt
+  cp .env.example .env        # Windows: copy .env.example .env
+  ```
+  Run and test:
+  ```bash
+  uvicorn app.main:app --reload   # http://localhost:8000/docs
+  pytest
+  ```
 
 ## Working on several computers
 
