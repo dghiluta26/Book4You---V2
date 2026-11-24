@@ -2,7 +2,8 @@
 
 from fastapi import APIRouter
 
-from app.api import health
+from app.api import accommodations, health
 
 api_router = APIRouter()
 api_router.include_router(health.router)
+api_router.include_router(accommodations.router)
