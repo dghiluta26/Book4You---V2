@@ -1,6 +1,7 @@
 "use client"
 
 import { Suspense } from "react"
+import { ChatPanel } from "@/components/chat/ChatPanel"
 import { PageShell } from "@/components/layout/PageShell"
 import { ResultsView } from "@/components/search/ResultsView"
 import { useLanguage } from "@/i18n/LanguageProvider"
@@ -14,6 +15,7 @@ export default function AccommodationsPage() {
       <p className="mt-2 mb-8 text-subtle">{t("accommodations.subtitle")}</p>
       {/* useSearchParams needs a Suspense boundary so the rest of the page can be prerendered */}
       <Suspense fallback={<div className="h-[400px] animate-pulse rounded-2xl bg-warm-gray" />}>
+        <ChatPanel />
         <ResultsView />
       </Suspense>
     </PageShell>

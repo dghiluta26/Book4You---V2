@@ -1,5 +1,6 @@
 import type { AccommodationDetail, AccommodationPage } from "@/types/accommodation"
 import type { Availability, Booking, BookingRequest } from "@/types/booking"
+import type { ChatResponse, SearchCriteria } from "@/types/chat"
 import { PAGE_SIZE, type SearchFilters, filtersToQuery } from "@/lib/search-filters"
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000"
@@ -68,4 +69,19 @@ export function getMyBookings(token: string, signal?: AbortSignal) {
 /** PATCH /bookings/{id}/cancel (needs a logged-in user). */
 export function cancelBooking(token: string, id: number) {
   return request<Booking>(`/bookings/${id}/cancel`, { method: "PATCH", token })
+}
+
+/** POST /chat/parse: free text (RO/EN) -> editable search filters. */
+export function parseChat(
+  message: string,
+  locale: "ro" | "en",
+  previous: SearchCriteria,
+  signal?: AbortSignal,
+) {
+  return request<ChatResponse>("/chat/parse", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message, locale, previous }),
+    signal,
+  })
 }

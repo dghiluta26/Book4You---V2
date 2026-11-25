@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useLanguage } from "@/i18n/LanguageProvider"
 import { SearchBox } from "@/components/search/SearchBox"
 
@@ -23,6 +24,12 @@ export function Hero() {
         </h1>
         <p className="mx-auto mt-4 mb-10 max-w-2xl text-lg text-cream/90">{t("home.subtitle")}</p>
         <SearchBox />
+        <Link
+          href="/accommodations#assistant"
+          className="mt-6 inline-block font-medium text-cream underline underline-offset-4 transition-opacity hover:opacity-70"
+        >
+          {t("home.askAssistant")}
+        </Link>
       </div>
     </section>
   )
