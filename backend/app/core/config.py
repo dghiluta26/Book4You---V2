@@ -17,6 +17,10 @@ class Settings(BaseSettings):
     # Supabase project URL, e.g. https://<ref>.supabase.co. Used to verify login tokens.
     supabase_url: str = ""
     jwt_audience: str = "authenticated"
+    # Google Gemini (chatbot). Without a key the chatbot uses its simple rule-based fallback.
+    llm_api_key: str = ""
+    llm_model: str = "gemini-3.5-flash-lite"
+    llm_timeout_seconds: float = 20.0
 
     @property
     def supabase_issuer(self) -> str:

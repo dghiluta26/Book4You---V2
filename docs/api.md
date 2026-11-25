@@ -63,3 +63,44 @@ Rules: two bookings overlap if `new.check_in < existing.check_out AND new.check_
 Only `confirmed` bookings count, so cancelling frees the period, and a stay may start on the day the
 previous one ends. The check runs in the service layer (friendly 409) and again in the database
 (`EXCLUDE` constraint), so two simultaneous requests cannot double-book. `total_price = nights x price_per_night`.
+
+## POST /chat/parse
+
+Turns a free-text request (Romanian or English) into editable search filters. No login needed.
+
+Request:
+
+```json
+{ "message": "caut o cabană lângă Brașov pentru 4 persoane", "locale": "ro", "previous": null }
+```
+
+`message`: 1-500 characters. `previous`: the filters currently shown, so a follow-up message
+("Brașov", "mai ieftin") refines them.
+
+Response:
+
+```json
+{
+  "criteria": { "destination": "Brașov", "check_in": null, "check_out": null, "guests": 4,
+                "min_price": null, "max_price": null, "types": ["cabin"], "activities": [] },
+  "missing": [],
+  "clarification": null,
+  "language": "ro",
+  "source": "llm",
+  "warnings": []
+}
+```
+
+- `missing: ["destination"]` comes with a `clarification` question in the user's language.
+- `source: "fallback"`: the language model was not available, simple keyword rules were used
+  (`warnings` contains `llm_unavailable` if a configured model failed). The endpoint still answers 200.
+- `warnings: ["dates_ignored"]`: dates were past, reversed or incomplete.
+- `activities` are shown to the user but do not filter the classic search.
+- Invalid input returns **422**.
+
+### How the language model is used safely
+
+Google Gemini (Interactions API) is forced to call one function, `set_search_filters`. It has no
+database access and nothing is executed on its behalf: the backend only reads the arguments and
+validates every field with Pydantic, dropping invalid values. Requests are sent with `store: false`.
+The API key exists only on the backend.
