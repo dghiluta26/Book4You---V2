@@ -57,6 +57,15 @@ export function ResultsView() {
     router.push(query ? `/accommodations?${query}` : "/accommodations")
   }
 
+  // Dates and guests of the search are passed on to the stay page to prefill the booking.
+  const detailsQuery = new URLSearchParams(
+    Object.entries({
+      check_in: filters.check_in,
+      check_out: filters.check_out,
+      guests: filters.guests,
+    }).filter(([, value]) => value),
+  ).toString()
+
   const current = result?.key === requestKey ? result : null
   const loading = current === null
 
@@ -147,6 +156,7 @@ export function ResultsView() {
                   <AccommodationCard
                     key={stay.id}
                     stay={stay}
+                    detailsQuery={detailsQuery}
                     highlighted={hoveredId === stay.id}
                     onHover={setHoveredId}
                   />
@@ -160,7 +170,12 @@ export function ResultsView() {
             </div>
             <div className={cn(mobileView === "list" && "hidden xl:block")}>
               <div className="h-[70vh] min-h-[420px] xl:sticky xl:top-6 xl:h-[calc(100vh-3rem)] xl:min-h-[520px]">
-                <MapView stays={current.page.items} hoveredId={hoveredId} onHover={setHoveredId} />
+                <MapView
+                  stays={current.page.items}
+                  hoveredId={hoveredId}
+                  onHover={setHoveredId}
+                  detailsQuery={detailsQuery}
+                />
               </div>
             </div>
           </div>

@@ -1,11 +1,17 @@
 "use client"
 
 import Link from "next/link"
+import { useAuth } from "@/auth/AuthProvider"
 import { useLanguage } from "@/i18n/LanguageProvider"
 
 export function Footer() {
   const { t } = useLanguage()
+  const { status } = useAuth()
   const linkClass = "transition-opacity hover:opacity-70"
+  const accountLinks =
+    status === "signedIn"
+      ? ([["/profile", "nav.profile"], ["/bookings", "nav.bookings"]] as const)
+      : ([["/login", "nav.login"], ["/signup", "nav.signup"]] as const)
 
   return (
     <footer className="mt-auto bg-primary text-cream">
@@ -30,12 +36,11 @@ export function Footer() {
         <div>
           <h3 className="mb-3 font-semibold text-cream">{t("footer.account")}</h3>
           <ul className="space-y-2 text-sm">
-            <li>
-              <Link href="/login" className={linkClass}>{t("nav.login")}</Link>
-            </li>
-            <li>
-              <Link href="/signup" className={linkClass}>{t("nav.signup")}</Link>
-            </li>
+            {accountLinks.map(([href, label]) => (
+              <li key={href}>
+                <Link href={href} className={linkClass}>{t(label)}</Link>
+              </li>
+            ))}
           </ul>
         </div>
 

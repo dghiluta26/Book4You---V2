@@ -58,6 +58,9 @@ export function UserMenu() {
           <Link href="/profile" onClick={() => setOpen(false)} className={itemClass}>
             {t("nav.profile")}
           </Link>
+          <Link href="/bookings" onClick={() => setOpen(false)} className={itemClass}>
+            {t("nav.bookings")}
+          </Link>
           <button type="button" onClick={handleLogout} className={itemClass}>
             {t("nav.logout")}
           </button>
