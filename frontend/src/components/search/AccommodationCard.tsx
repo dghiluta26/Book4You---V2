@@ -9,6 +9,8 @@ import type { AccommodationSummary } from "@/types/accommodation"
 
 type Props = {
   stay: AccommodationSummary
+  /** Query string added to the link (search dates and guests). */
+  detailsQuery?: string
   /** Highlighted while its marker is hovered on the map. */
   highlighted?: boolean
   /** Called when the mouse enters or leaves the card, so the map can highlight the marker. */
@@ -16,7 +18,7 @@ type Props = {
 }
 
 /** White card, 18px radius, lifts on hover, 240px photo with the type badge on top. */
-export function AccommodationCard({ stay, highlighted = false, onHover }: Props) {
+export function AccommodationCard({ stay, detailsQuery, highlighted = false, onHover }: Props) {
   const { t, locale } = useLanguage()
 
   const guests = `${stay.capacity} ${t(stay.capacity === 1 ? "card.guest" : "card.guests")}`
@@ -30,7 +32,7 @@ export function AccommodationCard({ stay, highlighted = false, onHover }: Props)
 
   return (
     <Link
-      href={`/accommodations/${stay.id}`}
+      href={`/accommodations/${stay.id}${detailsQuery ? `?${detailsQuery}` : ""}`}
       onMouseEnter={() => onHover?.(stay.id)}
       onMouseLeave={() => onHover?.(null)}
       className={cn(

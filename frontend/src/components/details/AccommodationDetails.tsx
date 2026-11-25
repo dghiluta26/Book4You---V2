@@ -2,8 +2,9 @@
 
 import { ArrowLeft, Bath, BedDouble, MapPin, Users } from "lucide-react"
 import Link from "next/link"
-import { useParams } from "next/navigation"
+import { useParams, useSearchParams } from "next/navigation"
 import { useEffect, useMemo, useState, type ReactNode } from "react"
+import { BookingCard } from "@/components/booking/BookingCard"
 import { NotFoundView } from "@/components/layout/NotFoundView"
 import { MapView } from "@/components/map/MapViewLoader"
 import { useLanguage } from "@/i18n/LanguageProvider"
@@ -26,6 +27,7 @@ function Fact({ icon, children }: { icon: ReactNode; children: ReactNode }) {
 /** Details page of one stay: photos, facts, description, amenities, map and the booking card. */
 export function AccommodationDetails() {
   const { id } = useParams<{ id: string }>()
+  const searchParams = useSearchParams()
   const { t, locale } = useLanguage()
   const [retry, setRetry] = useState(0)
   const [result, setResult] = useState<Result | null>(null)
@@ -69,10 +71,6 @@ export function AccommodationDetails() {
       </div>
     )
   }
-
-  const price = new Intl.NumberFormat(locale === "ro" ? "ro-RO" : "en-GB", {
-    maximumFractionDigits: 0,
-  }).format(stay.price_per_night)
 
   return (
     <div>
@@ -139,23 +137,8 @@ export function AccommodationDetails() {
         </div>
 
         <aside>
-          <div className="rounded-2xl bg-surface p-6 shadow-card lg:sticky lg:top-6">
-            <p className="text-primary">
-              <span className="text-3xl font-bold">
-                {price} {stay.currency}
-              </span>{" "}
-              <span className="text-subtle">{t("card.perNight")}</span>
-            </p>
-            {/* Booking is implemented in Step 7 */}
-            <button
-              type="button"
-              disabled
-              className="mt-6 h-12 w-full rounded-[10px] bg-primary font-bold text-cream opacity-50"
-            >
-              {t("details.book")}
-            </button>
-            <p className="mt-3 text-center text-xs text-subtle">{t("details.bookSoon")}</p>
-          </div>
+          {/* The key starts a fresh checkout for another stay or another set of dates */}
+          <BookingCard key={`${stay.id}?${searchParams}`} stay={stay} />
         </aside>
       </div>
     </div>

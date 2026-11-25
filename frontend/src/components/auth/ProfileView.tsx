@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useEffect, useState, type FormEvent } from "react"
 import { useAuth } from "@/auth/AuthProvider"
 import { useLanguage } from "@/i18n/LanguageProvider"
@@ -83,7 +84,10 @@ export function ProfileView() {
         </button>
       </form>
 
-      <p className="mt-6 min-h-10 rounded-[10px] bg-warm-gray px-3 py-2 text-sm text-subtle">
+      <Link
+        href="/bookings"
+        className="mt-6 block min-h-10 rounded-[10px] bg-warm-gray px-3 py-2 text-sm text-subtle transition-colors hover:bg-muted-green"
+      >
         {bookings === null
           ? t("auth.pleaseWait")
           : bookings === -1
@@ -91,7 +95,8 @@ export function ProfileView() {
             : bookings === 1
               ? t("profile.bookingsOne")
               : t("profile.bookingsCount", { n: bookings })}
-      </p>
+        <span className="ml-1 font-semibold text-primary">{t("booking.viewMine")} →</span>
+      </Link>
 
       <button
         type="button"

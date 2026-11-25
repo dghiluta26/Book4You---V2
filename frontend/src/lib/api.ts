@@ -1,4 +1,5 @@
 import type { AccommodationDetail, AccommodationPage } from "@/types/accommodation"
+import type { Availability, Booking, BookingRequest } from "@/types/booking"
 import { PAGE_SIZE, type SearchFilters, filtersToQuery } from "@/lib/search-filters"
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000"
@@ -26,12 +27,45 @@ export async function getAccommodation(id: string, signal?: AbortSignal): Promis
   return (await response.json()) as AccommodationDetail
 }
 
-/** GET /bookings/me (needs a logged-in user). */
-export async function getMyBookings(token: string, signal?: AbortSignal): Promise<{ id: number }[]> {
-  const response = await fetch(`${API_URL}/bookings/me`, {
-    headers: { Authorization: `Bearer ${token}` },
-    signal,
+/** An error answered by the API; `status` tells the UI what went wrong (401, 409, 422...). */
+export class ApiError extends Error {
+  constructor(public status: number) {
+    super(`Request failed with status ${status}`)
+  }
+}
+
+async function request<T>(path: string, init: RequestInit & { token?: string } = {}): Promise<T> {
+  const { token, headers, ...rest } = init
+  const response = await fetch(`${API_URL}${path}`, {
+    ...rest,
+    headers: { ...headers, ...(token ? { Authorization: `Bearer ${token}` } : {}) },
   })
-  if (!response.ok) throw new Error(`Request failed with status ${response.status}`)
-  return (await response.json()) as { id: number }[]
+  if (!response.ok) throw new ApiError(response.status)
+  return (await response.json()) as T
+}
+
+/** GET /accommodations/{id}/availability */
+export function getAvailability(id: number, checkIn: string, checkOut: string, signal?: AbortSignal) {
+  const query = new URLSearchParams({ check_in: checkIn, check_out: checkOut })
+  return request<Availability>(`/accommodations/${id}/availability?${query}`, { signal })
+}
+
+/** POST /bookings (needs a logged-in user). */
+export function createBooking(token: string, booking: BookingRequest) {
+  return request<Booking>("/bookings", {
+    method: "POST",
+    token,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(booking),
+  })
+}
+
+/** GET /bookings/me (needs a logged-in user). */
+export function getMyBookings(token: string, signal?: AbortSignal) {
+  return request<Booking[]>("/bookings/me", { token, signal })
+}
+
+/** PATCH /bookings/{id}/cancel (needs a logged-in user). */
+export function cancelBooking(token: string, id: number) {
+  return request<Booking>(`/bookings/${id}/cancel`, { method: "PATCH", token })
 }

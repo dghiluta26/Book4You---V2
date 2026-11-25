@@ -19,6 +19,8 @@ type Props = {
   hoveredId?: number | null
   /** Called when the mouse enters or leaves a marker, so the list can highlight the card. */
   onHover?: (id: number | null) => void
+  /** Query string added to the popup links (search dates and guests). */
+  detailsQuery?: string
   /** Hide popups (used on the details page, where there is a single stay). */
   showPopups?: boolean
   className?: string
@@ -40,6 +42,7 @@ function buildPopup(
   stay: AccommodationSummary,
   texts: { price: string; perNight: string; link: string },
   open: (href: string) => void,
+  query?: string,
 ): HTMLElement {
   const text = (tag: string, className: string, content: string) => {
     const element = document.createElement(tag)
@@ -56,7 +59,7 @@ function buildPopup(
   price.append(text("span", "font-normal text-subtle", texts.perNight))
   root.append(price)
 
-  const href = `/accommodations/${stay.id}`
+  const href = `/accommodations/${stay.id}${query ? `?${query}` : ""}`
   const link = text("a", "mt-2 inline-block font-semibold text-primary underline", texts.link)
   link.setAttribute("href", href)
   link.addEventListener("click", (event) => {
@@ -73,7 +76,14 @@ function buildPopup(
  * ALWAYS destroyed in that effect's cleanup, so it survives React StrictMode, hot reload and
  * the page being hidden/shown again when navigating back.
  */
-export default function MapView({ stays, hoveredId, onHover, showPopups = true, className }: Props) {
+export default function MapView({
+  stays,
+  hoveredId,
+  onHover,
+  detailsQuery,
+  showPopups = true,
+  className,
+}: Props) {
   const router = useRouter()
   const { t, locale } = useLanguage()
   const containerRef = useRef<HTMLDivElement>(null)
@@ -125,6 +135,7 @@ export default function MapView({ stays, hoveredId, onHover, showPopups = true, 
               link: t("map.viewDetails"),
             },
             (href) => router.push(href),
+            detailsQuery,
           ),
         )
       }
@@ -143,7 +154,7 @@ export default function MapView({ stays, hoveredId, onHover, showPopups = true, 
       entries.forEach((entry) => entry.marker.remove())
       entriesRef.current = []
     }
-  }, [stays, showPopups, onHover, router, t, locale])
+  }, [stays, showPopups, onHover, router, t, locale, detailsQuery])
 
   // 3) Highlight the hovered stay. Only a CSS class is toggled, so the marker element under the
   //    mouse is never replaced (which would make the highlight flicker).
