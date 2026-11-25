@@ -1,11 +1,14 @@
-# Book4You: Documentation (Report 2)
+# Book4You: documentation (Report 2)
 
-Documents are written in Markdown with Mermaid diagrams so they can go straight into the report.
+Minimal design and prototype documentation. Diagrams use Mermaid, which GitHub renders.
 
-| File | Content | Filled in at |
-|---|---|---|
-| [architecture.md](architecture.md) | Architecture overview (frontend, backend, Supabase, LLM) | Step 9 |
-| [database.md](database.md) | ER diagram and schema description | Step 4 |
-| [api.md](api.md) | Main REST endpoints | Steps 6-9 |
-| [chatbot-sequence.md](chatbot-sequence.md) | Sequence diagram of the chatbot flow | Step 8-9 |
-| [wireframes/](wireframes/) | Screen wireframes and prototype screenshots | Step 9 |
+| Document | Content |
+|---|---|
+| [architecture.md](architecture.md) | Actors, system diagram, structure, booking sequence, security, requirement coverage, limitations |
+| [database.md](database.md) | ER diagram, design decisions, Supabase setup |
+| [api.md](api.md) | REST endpoints with parameters and errors |
+| [chatbot-sequence.md](chatbot-sequence.md) | Assistant sequence diagram, validation, fallback, examples |
+| [wireframes/](wireframes/README.md) | Screen wireframes |
+| [screenshots.md](screenshots.md) | Prototype screenshots |
+| [testing.md](testing.md) | Tests, coverage, search performance |
+| [../README.md](../README.md) | How to install and run |
