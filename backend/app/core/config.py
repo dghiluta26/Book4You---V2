@@ -14,6 +14,17 @@ class Settings(BaseSettings):
     cors_origins: str = "http://localhost:3000"
     # Supabase Postgres connection string (see docs/database.md). Empty until configured.
     database_url: str = ""
+    # Supabase project URL, e.g. https://<ref>.supabase.co. Used to verify login tokens.
+    supabase_url: str = ""
+    jwt_audience: str = "authenticated"
+
+    @property
+    def supabase_issuer(self) -> str:
+        return f"{self.supabase_url.rstrip('/')}/auth/v1"
+
+    @property
+    def supabase_jwks_url(self) -> str:
+        return f"{self.supabase_issuer}/.well-known/jwks.json"
 
     @property
     def cors_origins_list(self) -> list[str]:

@@ -5,7 +5,8 @@ from sqlalchemy.orm import Session
 
 from app.core.database import get_db
 from app.schemas.accommodation import AccommodationDetail, AccommodationPage, SearchParams
-from app.services import accommodation_search
+from app.schemas.booking import Availability, AvailabilityParams
+from app.services import accommodation_search, booking_service
 from app.services.errors import NotFoundError
 
 router = APIRouter(prefix="/accommodations", tags=["accommodations"])
@@ -26,5 +27,18 @@ def get_accommodation(accommodation_id: int, db: Session = Depends(get_db)) -> A
     """Full details of one stay: photos, description, amenities, location."""
     try:
         return accommodation_search.get_accommodation(db, accommodation_id)
+    except NotFoundError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+
+
+@router.get("/{accommodation_id}/availability", response_model=Availability)
+def check_availability(
+    accommodation_id: int,
+    params: Annotated[AvailabilityParams, Query()],
+    db: Session = Depends(get_db),
+) -> Availability:
+    """Is this stay free for the period? Also returns the number of nights and the total price."""
+    try:
+        return booking_service.check_availability(db, accommodation_id, params.check_in, params.check_out)
     except NotFoundError as error:
         raise HTTPException(status_code=404, detail=str(error)) from error

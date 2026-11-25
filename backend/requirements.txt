@@ -9,5 +9,5 @@ alembic==1.20.1
 psycopg[binary]==3.3.9
 python-dotenv
 httpx==0.28.1
-pyjwt==2.15.1
+pyjwt[crypto]==2.15.1
 pytest==9.2.0
