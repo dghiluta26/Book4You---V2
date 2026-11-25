@@ -180,3 +180,16 @@ def test_cannot_cancel_someone_elses_booking(client: TestClient, catalog) -> Non
     assert client.patch(f"/bookings/{booking_id}/cancel").status_code == 404
     login_as(AuthUser(id=uuid.uuid4(), email="owner2@x.dev"))
     assert client.patch("/bookings/999999/cancel").status_code == 404
+
+
+def test_profile_follows_the_account_name(client: TestClient, catalog, db) -> None:
+    from app.models import Profile
+
+    user_id = uuid.uuid4()
+    login_as(AuthUser(id=user_id, email="ana@x.dev", full_name="Ana"))
+    book(client, catalog["cabin"], 10, 12)
+    login_as(AuthUser(id=user_id, email="ana@x.dev", full_name="Ana Pop"))
+    book(client, catalog["cabin"], 20, 22)
+
+    db.expire_all()
+    assert db.get(Profile, user_id).full_name == "Ana Pop"

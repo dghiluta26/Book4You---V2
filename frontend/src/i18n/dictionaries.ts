@@ -23,7 +23,6 @@ export const en = {
   "login.password": "Password",
   "login.submit": "Login",
   "login.noAccount": "Don't have an account?",
-  "login.comingSoon": "Authentication will be connected in a later step.",
 
   "signup.title": "Create your account",
   "signup.subtitle": "Sign up to book stays and manage your bookings.",
@@ -99,6 +98,33 @@ export const en = {
   "notFound.text": "The page you are looking for does not exist.",
   "notFound.home": "Back to home",
 
+  "nav.hello": "Hello, {name}",
+  "nav.profile": "My profile",
+  "nav.logout": "Log out",
+
+  "signup.name": "Full name",
+  "signup.passwordHint": "At least {n} characters.",
+  "signup.checkEmail": "Account created. Check your email to confirm it, then log in.",
+
+  "auth.pleaseWait": "Please wait…",
+  "auth.error.missing": "Please fill in all fields.",
+  "auth.error.invalidCredentials": "Wrong email or password.",
+  "auth.error.userExists": "An account with this email already exists.",
+  "auth.error.weakPassword": "The password is too weak. Use at least 6 characters.",
+  "auth.error.emailNotConfirmed": "Please confirm your email first, then log in.",
+  "auth.error.rateLimit": "Too many attempts. Please wait a few minutes and try again.",
+  "auth.error.invalidEmail": "Please enter a valid email address.",
+  "auth.error.emailNotAuthorized": "A confirmation email cannot be sent to this address.",
+  "auth.error.generic": "Something went wrong. Please try again.",
+  "auth.error.notConfigured": "Authentication is not configured yet.",
+
+  "profile.title": "My profile",
+  "profile.save": "Save changes",
+  "profile.saved": "Your profile was updated.",
+  "profile.bookingsCount": "You have {n} bookings.",
+  "profile.bookingsOne": "You have 1 booking.",
+  "profile.bookingsError": "Could not load your bookings from the server.",
+
   "footer.tagline": "Find the right stay, faster.",
   "footer.explore": "Explore",
   "footer.account": "Account",
@@ -129,7 +155,6 @@ export const ro: Record<TranslationKey, string> = {
   "login.password": "Parolă",
   "login.submit": "Autentificare",
   "login.noAccount": "Nu ai cont?",
-  "login.comingSoon": "Autentificarea va fi conectată într-un pas ulterior.",
 
   "signup.title": "Creează-ți contul",
   "signup.subtitle": "Înregistrează-te pentru a rezerva și a-ți gestiona rezervările.",
@@ -204,6 +229,33 @@ export const ro: Record<TranslationKey, string> = {
   "notFound.title": "Pagina nu a fost găsită",
   "notFound.text": "Pagina căutată nu există.",
   "notFound.home": "Înapoi acasă",
+
+  "nav.hello": "Salut, {name}",
+  "nav.profile": "Profilul meu",
+  "nav.logout": "Deconectare",
+
+  "signup.name": "Nume complet",
+  "signup.passwordHint": "Cel puțin {n} caractere.",
+  "signup.checkEmail": "Cont creat. Verifică emailul pentru confirmare, apoi autentifică-te.",
+
+  "auth.pleaseWait": "Te rugăm să aștepți…",
+  "auth.error.missing": "Completează toate câmpurile.",
+  "auth.error.invalidCredentials": "Email sau parolă greșită.",
+  "auth.error.userExists": "Există deja un cont cu acest email.",
+  "auth.error.weakPassword": "Parola este prea slabă. Folosește cel puțin 6 caractere.",
+  "auth.error.emailNotConfirmed": "Confirmă mai întâi emailul, apoi autentifică-te.",
+  "auth.error.rateLimit": "Prea multe încercări. Așteaptă câteva minute și încearcă din nou.",
+  "auth.error.invalidEmail": "Introdu o adresă de email validă.",
+  "auth.error.emailNotAuthorized": "Nu se poate trimite un email de confirmare la această adresă.",
+  "auth.error.generic": "Ceva nu a mers. Încearcă din nou.",
+  "auth.error.notConfigured": "Autentificarea nu este încă configurată.",
+
+  "profile.title": "Profilul meu",
+  "profile.save": "Salvează modificările",
+  "profile.saved": "Profilul a fost actualizat.",
+  "profile.bookingsCount": "Ai {n} rezervări.",
+  "profile.bookingsOne": "Ai 1 rezervare.",
+  "profile.bookingsError": "Rezervările nu au putut fi încărcate de pe server.",
 
   "footer.tagline": "Găsește cazarea potrivită, mai repede.",
   "footer.explore": "Explorează",

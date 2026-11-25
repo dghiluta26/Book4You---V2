@@ -2,10 +2,13 @@
 
 import Link from "next/link"
 import { useLanguage } from "@/i18n/LanguageProvider"
+import { useAuth } from "@/auth/AuthProvider"
 import { LanguageSwitcher } from "./LanguageSwitcher"
+import { UserMenu } from "./UserMenu"
 
 export function Navbar() {
   const { t } = useLanguage()
+  const { status } = useAuth()
 
   return (
     <header className="bg-primary text-cream">
@@ -29,19 +32,25 @@ export function Navbar() {
 
         <div className="flex items-center gap-4">
           <LanguageSwitcher />
-          {/* Auth state ("Hello, name") is added in Step 7 */}
-          <Link
-            href="/login"
-            className="rounded-[5px] border border-cream px-4 py-2 text-sm transition-opacity hover:opacity-70"
-          >
-            {t("nav.login")}
-          </Link>
-          <Link
-            href="/signup"
-            className="rounded-[5px] bg-cream px-4 py-2 text-sm font-bold text-primary transition-opacity hover:opacity-90"
-          >
-            {t("nav.signup")}
-          </Link>
+          {status === "signedIn" && <UserMenu />}
+          {/* While the session is loading, keep the space empty to avoid a flash of buttons */}
+          {status === "loading" && <span className="inline-block h-9 w-[200px]" aria-hidden />}
+          {status === "signedOut" && (
+            <>
+              <Link
+                href="/login"
+                className="rounded-[5px] border border-cream px-4 py-2 text-sm transition-opacity hover:opacity-70"
+              >
+                {t("nav.login")}
+              </Link>
+              <Link
+                href="/signup"
+                className="rounded-[5px] bg-cream px-4 py-2 text-sm font-bold text-primary transition-opacity hover:opacity-90"
+              >
+                {t("nav.signup")}
+              </Link>
+            </>
+          )}
         </div>
       </nav>
     </header>

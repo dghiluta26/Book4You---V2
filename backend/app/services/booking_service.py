@@ -65,11 +65,14 @@ def check_availability(
 
 
 def _ensure_profile(db: Session, user: AuthUser) -> None:
-    """Bookings reference profiles.id. The profile is created the first time a user books."""
+    """Bookings reference profiles.id. The profile is created at the first booking and kept in
+    step with the account (email, name) at every later one."""
+    insert = pg_insert(Profile).values(id=user.id, email=user.email, full_name=user.full_name)
     db.execute(
-        pg_insert(Profile)
-        .values(id=user.id, email=user.email, full_name=user.full_name)
-        .on_conflict_do_nothing(index_elements=["id"])
+        insert.on_conflict_do_update(
+            index_elements=["id"],
+            set_={"email": insert.excluded.email, "full_name": insert.excluded.full_name},
+        )
     )
 
 

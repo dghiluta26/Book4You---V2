@@ -1,10 +1,14 @@
+import { Suspense } from "react"
+import { AuthForm } from "@/components/auth/AuthForm"
 import { PageShell } from "@/components/layout/PageShell"
-import { AuthForm } from "@/components/layout/AuthForm"
 
 export default function LoginPage() {
   return (
     <PageShell>
-      <AuthForm mode="login" />
+      {/* useSearchParams (?next=...) needs a Suspense boundary */}
+      <Suspense fallback={<div className="mx-auto h-[420px] max-w-md animate-pulse rounded-2xl bg-warm-gray" />}>
+        <AuthForm mode="login" />
+      </Suspense>
     </PageShell>
   )
 }

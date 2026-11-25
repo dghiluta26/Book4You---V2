@@ -42,7 +42,7 @@ Instructions are added step by step as the project grows.
   ```bash
   cd frontend
   npm install      # first time on each machine
-  cp .env.example .env.local   # optional: API URL (default http://localhost:8000). Windows: copy
+  cp .env.example .env.local   # then fill in the Supabase URL and publishable key. Windows: copy
   npm run dev      # http://localhost:3000
   ```
 - Backend (FastAPI), first time on each machine:
@@ -76,6 +76,14 @@ cd backend && source .venv/bin/activate     # Windows: .venv\Scripts\Activate.ps
 python ../data/import_catalog.py --dry-run  # validate only
 python ../data/import_catalog.py            # import (safe to run again: it updates, not duplicates)
 ```
+
+### Login (Supabase Auth)
+
+- `frontend/.env.local`: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (both public)
+- `backend/.env`: `SUPABASE_URL` (no secret needed; tokens are verified with the project's public keys)
+- Restart both servers after changing these files.
+- For the demo, turn off **Confirm email** in Supabase (Authentication > Sign In / Providers > Email),
+  because the built-in email service is heavily rate-limited.
 
 ## Working on several computers
 
