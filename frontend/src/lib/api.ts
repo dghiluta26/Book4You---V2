@@ -25,3 +25,13 @@ export async function getAccommodation(id: string, signal?: AbortSignal): Promis
   if (!response.ok) throw new Error(`Request failed with status ${response.status}`)
   return (await response.json()) as AccommodationDetail
 }
+
+/** GET /bookings/me (needs a logged-in user). */
+export async function getMyBookings(token: string, signal?: AbortSignal): Promise<{ id: number }[]> {
+  const response = await fetch(`${API_URL}/bookings/me`, {
+    headers: { Authorization: `Bearer ${token}` },
+    signal,
+  })
+  if (!response.ok) throw new Error(`Request failed with status ${response.status}`)
+  return (await response.json()) as { id: number }[]
+}
