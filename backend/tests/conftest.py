@@ -41,6 +41,14 @@ def engine():
     engine = create_engine(normalize_database_url(TEST_DATABASE_URL))
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
+    with engine.begin() as connection:
+        # create_all cannot express this constraint: add the same one the migration creates
+        connection.exec_driver_sql("CREATE EXTENSION IF NOT EXISTS btree_gist")
+        connection.exec_driver_sql(
+            "ALTER TABLE bookings ADD CONSTRAINT ex_bookings_no_overlap EXCLUDE USING gist ("
+            "accommodation_id WITH =, daterange(check_in, check_out, '[)') WITH &&"
+            ") WHERE (status = 'confirmed')"
+        )
     yield engine
     Base.metadata.drop_all(engine)
     engine.dispose()
@@ -100,3 +108,14 @@ def make_booking(db: Session):
         db.flush()
         return booking
     return _make
+
+
+@pytest.fixture
+def current_user():
+    """Log in as a user: the real token check is replaced by a fixed AuthUser."""
+    from app.core.security import AuthUser, get_current_user
+
+    user = AuthUser(id=uuid.uuid4(), email="ana@example.com", full_name="Ana Pop")
+    app.dependency_overrides[get_current_user] = lambda: user
+    yield user
+    app.dependency_overrides.pop(get_current_user, None)
